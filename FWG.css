@@ -118,7 +118,7 @@
 
 /* ----------------------------For Container--------------------------- */
     .container{
-        height: 400px;
+        height: 650px; /* Controlls The Viewers Position */
         display: flex;
         flex-wrap: nowrap;
         justify-content: start;
@@ -128,26 +128,32 @@
 
 /* ------------------------------For Card------------------------------ */
     .card{
+        
         width: 80px;
+        height: 400px;
         border-radius: 12px;
         cursor: pointer;
         overflow: hidden;
         border-radius: 28px;
-        margin: 0 10px;
+        margin: 0 25px;
         display: flex;
         align-items: flex-end;
         transition: .6s cubic-bezier(.28,-0.303,0,.99);
-        box-shadow: 0px 10px 30px -5px rgb(255, 255, 255);
+        box-shadow: 0px 30px 30px -5px rgb(0, 0, 0);
     }
 
     .card > .row{
-        color: white;
+        color: rgb(255, 255, 255);
         display: flex;
         flex-wrap: nowrap;
     }
 
     .card > .row > .icon{
-        background: rgba(192, 212, 228, 0.13);
+        background-position: center;
+        background-size: cover; /* This makes the image cover the entire card */
+        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        background-image: url(https://t3.ftcdn.net/jpg/02/60/33/92/360_F_260339227_T9cNrOnlGdYiWdYWoqEtgwGO45ro14EL.jpg);
+        box-shadow: 0px 15px 20px -1px rgb(0, 0, 0);
         color: white;
         border-radius: 50%;
         width: 50px;
@@ -158,24 +164,32 @@
     }
 
     .card > .row > .discription{
+        background-size: cover; /* This makes the image cover the entire card */
+        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        box-shadow: 0px 10px 30px -5px rgb(255, 0, 119);
+        background-image: url(bgi.jpg);
+        border-radius: 20px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         overflow: hidden;
+        margin: 0 10px;
         height: 80px;
-        width: 520px;
+        width: 400px;
         opacity: 0;
         transform: translateY(30px);
         transition-delay: .3s ease;
     }
     
     .discription p{
-        color: #b0b0ba;
+        
+        color: #ffffff;
         padding-top: 5px;
     }
 
     .discription h4{
         text-transform: uppercase;
+        align-items: center;
     }
 
     input{
@@ -192,16 +206,29 @@
     }
 
     .card[for="c1"]{
-        background-image: url(bgi.jpg);
-    }
+        background-image: url(https://cdn.dekudeals.com/images/22486fc9c315e0a77c37e382a97be5e3ab8323ac/w500.jpg);
+        background-size: cover; /* This makes the image cover the entire card */
+        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+    }   
 
     .card[for="c2"]{
-        background-image: url(bgi.jpg);
+        background-image: url();
+        background-size: cover; /* This makes the image cover the entire card */
+        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
     }
 
     .card[for="c3"]{
-        background-image: url(https://images.alphacoders.com/736/thumb-1920-736461.png);
+        background-image: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSoABOGk7XBI6U4YOBI6YK_3ly14_nnl2am9jtCMG9_efUCf2Quv-w5bIAbuJxFQtou6xulGA);
+        background-size: cover; /* This makes the image cover the entire card */
+        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
     }
+
+    .card[for="c4"] {
+        background-image: url(https://assetsio.gnwcdn.com/co5tkm.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp);
+        background-size: cover; /* This makes the image cover the entire card */
+        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+    }
+    
 
 
 /*______________________________________________________________________*/
