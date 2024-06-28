@@ -3,41 +3,130 @@
 <head>
 
     <title>Contacts-FreeWeeklyGames</title>
-
+    <link rel="stylesheet" href="Contact_FWG.css">
     <link rel="stylesheet" href="FWG.css">
     <link rel="stylesheet" href="New_Gallery_FWG.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!--BootStrap 5 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <style>
         a {text-decoration: none;}
     </style>
+
+    <!--Emails Js Installation-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "0UNb7p7ATfLqvft5d",
+            });
+        })();
+    </script>
+
+    <!--Link JS-->
+    <script src="Contact_FWG.js"></script>
+
+    <!--Footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     
 
 </head>
 
-<body>
+<body class="C_body">
     
     <section class="body">
 
         <header>
             <nav>
-                <a href="Index_FWG.html"><img src="logo ig.png" class="btn" width="30" height="auto"></a> <!-- For Logo-->
-                
+                <!-- <a href="Index_FWG.html"><img src="https://media4.giphy.com/media/gKTNc6zs0ehvjw4mfo/200w.gif?cid=6c09b9529ojgt3829c0g34qm5pt6rtxticpgwece3buq9yb3&ep=v1_gifs_search&rid=200w.gif&ct=g" class="btn" width="30" height="auto"></a> For Logo-->
+                <a href="Index_FWG.html"><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/TwinkAAa.gif" class="btn"></a> <!-- For Logo-->
                 <div class="links">
                     <ul>
                         <li class="n_btn"><a href="Index_FWG.html" >Home</a></li>
                         <li class="n_btn"><a href="New_Gallery_FWG.html" >Gallery</a></li>
                         <li class="n_btn"><a href="" >Sign Up</a></li>
-                        <li class="n_btn"><a href="" >About</a></li>
+                        <li class="n_btn"><a href="About_FWG.html" >About</a></li>
                         <li class="n_btn"><a href="Contact_FWG.html" >Contacts</a></li>
                     </ul>
                 </div>
             
             </nav>
         </header>
+
+
+        <div class="C_Control">
+            <div class="C_container">
+                <div class="C_row">
+                    <div class="col left">
+                        <h1>Hi there!</h1><br><br><br>
+                        <h4>If you Have anything to say, then Feel Free to Reach Out To me At Any Time!</h4>
+                    </div>
+                    <div class="col right">
+                        <h1>Contact form</h1>
+                        <div class="form-group">
+                            <h5 for="name">Name</h5>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" />
+                        </div>
+                        <div class="form-group">
+                            <h5 for="email">Email</h5>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                        </div>
+                        <div class="form-group">
+                            <h5 for="message">Message</h5>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <button class="C_btn" onclick="sendMail()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function sendMail() {
+                alert("Mail sent!");
+            }
+        </script>
+
+        <!--Footer-->
+        <footer>
+
+            <div class="footerContainer">
+                <div class="socials">
+                    <div class="f_background"></div>
+                    <a href="https://discord.com"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://github.com/C-J0hn24"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+    
+            <div class="footernav">
+                <ul>
+                    <li class="n_btn"><a href="Index_FWG.html" >Home</a></li>
+                    <li class="n_btn"><a href="New_Gallery_FWG.html" >Gallery</a></li>
+                    <li class="n_btn"><a href="" >Sign Up</a></li>
+                    <li class="n_btn"><a href="About_FWG.html" >About</a></li>
+                    <li class="n_btn"><a href="Contact_FWG.html" >Contacts</a></li>
+    
+                </ul>
+            </div>
+            
+
+            <div class="footerbottom">
+                <p>Copyright &copy; 2024 <span class="creator">Made By C-John24 (Bugs Included!)</span></p>
+            </div>
+
+        </footer>
+
     </section>
+
+    
 
 </body>
 </html>

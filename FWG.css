@@ -5,13 +5,21 @@
     font-family: comfortaa;
 }
 
+@keyframes spinBackground {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+ul, ol {
+    list-style-type: none;
+}
 
 /* ------------------------------For Body------------------------------ */
 
     .body{
         min-height: 100vh;
         width: 100%;
-        background-image: url(bgi\ 2.jpeg);
+        background-image: url(https://i.pinimg.com/originals/b4/73/99/b47399ca94194365d64d6316509bd5f6.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -23,25 +31,32 @@
 /* -----------------------------For Buttons---------------------------- */
 
     .btn{
+        border-radius: 50px;
+        box-shadow: 0px 0px 30px -7px rgb(111, 0, 255);
+        
         font-family: comfortaa;
         font-size: auto;
         font-weight: 700;
-        padding: 0.5em 1em;
+        
         color: rgb(255, 255, 255);
-        /*background-color: rgba(255, 255, 255, 0);
-        border: 2px solid violet;
-        border-radius: 10px;*/
+        
+
+        scale: .8;
+        z-index: 1; 
+        animation: spinBackground 9s linear infinite;
 
         transition: all 0.3s;
     }
 
     .btn:hover{
-        transform: translateY(15px) translateX(12px);
-        scale: 1.1;
+        box-shadow: 0px 0px 30px -7px rgb(212, 0, 255);
+        
+        scale: 1;
         background-color: rgba(202, 231, 255, 0.13);
-        /*border: .5px solid rgb(255, 255, 255);*/
         color: white;
         border-radius: 55px;
+        animation: spinBackground 2s linear infinite;
+
     }
 
     .n_btn{
@@ -125,10 +140,19 @@
 
 /* ----------------------------For Container--------------------------- */
     .container{
-        height: 650px; /* Controlls The Viewers Position */
+        background-color: transparent;
+        border-radius: 40px;
+        backdrop-filter: blur(8px);
+        background-image: linear-gradient(
+            80deg, 
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+        );
+        height: 600px; 
         display: flex;
         flex-wrap: nowrap;
-        justify-content: start;
+        justify-content:center;
+        align-items: center;
     }
 /*______________________________________________________________________*/
 
@@ -189,25 +213,20 @@
         color: white;
     }
     
-    @keyframes spinBackground {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-    
     
 
     .card > .row > .discription{
         position: absolute;
         bottom: 22%;
         left: 127%;
-        background-size: cover; /* This makes the image cover the entire card */
-        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        background-size: cover;
+        background-repeat: no-repeat; 
         box-shadow: 0px 10px 15px -5px rgba(0, 132, 255, 0.342);
         
         background-color: transparent;
         backdrop-filter: blur(13px);
         background-image: linear-gradient(
-            80deg, /* Correcting the typo from '120def' to '120deg' */
+            80deg, 
             rgba(204, 0, 255, 0.3),
             rgba(0, 195, 255, 0.3)
         );
@@ -266,28 +285,119 @@
 
     .card[for="c1"]{
         background-image: url(https://cdn.dekudeals.com/images/22486fc9c315e0a77c37e382a97be5e3ab8323ac/w500.jpg);
-        background-size: cover; /* This makes the image cover the entire card */
-        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        background-size: cover; 
+        background-repeat: no-repeat; 
     }   
 
     .card[for="c2"]{
         background-image: url(logo\ ig.png);
-        background-size: cover; /* This makes the image cover the entire card */
-        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        background-size: cover; 
+        background-repeat: no-repeat; 
     }
 
     .card[for="c3"]{
         background-image: url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSoABOGk7XBI6U4YOBI6YK_3ly14_nnl2am9jtCMG9_efUCf2Quv-w5bIAbuJxFQtou6xulGA);
-        background-size: cover; /* This makes the image cover the entire card */
-        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        background-size: cover;
+        background-repeat: no-repeat; 
     }
 
     .card[for="c4"] {
         background-image: url(https://assetsio.gnwcdn.com/co5tkm.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp);
-        background-size: cover; /* This makes the image cover the entire card */
-        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
+        background-size: cover; 
+        background-repeat: no-repeat; 
     }
     
 
 
+/*______________________________________________________________________*/
+
+
+
+/*------------------------------ Footer Bar ----------------------------*/
+footer{
+    box-shadow: 8px 10px 30px 20px rgba(0, 0, 0, 0.712);
+    margin-top: 30px;
+    background-color: transparent;
+    border-radius: 15px;
+    backdrop-filter: blur(13px);
+    background-image: linear-gradient(
+        80deg, 
+        rgba(0, 0, 0, 0.692),
+        rgba(0, 0, 0, 0.3)
+    );
+}
+
+.footerContainer{
+    width: 100%;
+    
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+}
+
+.socials a{
+
+    background-color: transparent;
+    backdrop-filter: blur(13px);
+    margin: 10px;
+    border-radius: 50%;
+
+    
+}
+
+.socials a i{
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+
+    font-size: 2em;
+    color: black;
+    opacity: .9;
+}
+
+
+.footernav{
+    margin: 30px;
+}
+
+.footernav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footernav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s;
+    
+    }
+
+.footernav ul li a:hover{
+    opacity: 1;
+}
+
+.footerbottom{
+    background-color:#000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerbottom p{
+    color: white;
+}
+
+.creator{
+    font-size: 1em;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 0px;
+}
 /*______________________________________________________________________*/

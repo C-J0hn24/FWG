@@ -1,0 +1,124 @@
+@keyframes spinBackground {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.mbtn{
+    border-radius: 80px;
+    box-shadow: 0px 0px 30px -7px rgb(111, 0, 255);
+    
+    font-family: comfortaa;
+    font-size: auto;
+    font-weight: 700;
+    
+    color: rgb(255, 255, 255);
+    
+
+    scale: .8;
+    z-index: 1; 
+    animation: spinBackground 9s linear infinite;
+
+    transition: all 0.3s;
+}
+
+.mbtn:hover{
+    box-shadow: 0px 0px 30px -7px rgb(212, 0, 255);
+    
+    scale: 1;
+    background-color: rgba(202, 231, 255, 0.13);
+    color: white;
+    border-radius: 100%;
+    animation: spinBackground 2s linear infinite;
+
+}
+
+.n_btn{
+    
+    transition: all 0.3s;
+
+}
+
+.n_btn:hover{
+    scale: 1.2;
+    transform: translateY(0px);
+    border-radius: 40px;
+}
+
+
+.about{
+    margin: auto;
+    margin-top: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 40px;
+    backdrop-filter: blur(8px);
+    background-image: linear-gradient(
+        80deg, 
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+    );
+}
+
+.about img{
+    height: auto;
+    width: 400px;
+}
+
+.about-txt{
+    width: 550px;
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-txt h1{
+    color: white;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-txt h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about-txt p{
+    color: rgb(255, 0, 98);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button{
+    background: #f9004d;
+    color:
+    white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover{
+    background: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
+}
