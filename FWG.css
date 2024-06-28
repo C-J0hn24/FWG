@@ -60,6 +60,11 @@
 
 
 /* -----------------------------For navigation------------------------- */
+    header{
+        padding: 10px 0px;
+        box-sizing: border-box;
+    }
+
     nav{
         display: flex;
         padding: 1% 1%;
@@ -87,10 +92,12 @@
         text-decoration: none;
         font-size: 13px;
         font-family: comfortaa;
+        text-transform: uppercase;
+        font-weight: bold;
 
         background-color: rgba(255, 255, 255, 0);
         padding: 0.5em 1em;
-        border: 2px solid violet;
+        border: 2px solid rgb(255, 65, 255);
         border-radius: 10px;
 
         transition: all 0.3s;
@@ -146,28 +153,66 @@
         color: rgb(255, 255, 255);
         display: flex;
         flex-wrap: nowrap;
+        position: relative;
     }
 
-    .card > .row > .icon{
-        background-position: center;
-        background-size: cover; /* This makes the image cover the entire card */
-        background-repeat: no-repeat; /* This ensures the image doesn't repeat */
-        background-image: url(https://t3.ftcdn.net/jpg/02/60/33/92/360_F_260339227_T9cNrOnlGdYiWdYWoqEtgwGO45ro14EL.jpg);
-        box-shadow: 0px 15px 20px -1px rgb(0, 0, 0);
-        color: white;
-        border-radius: 50%;
+    .card > .row > .icon {
+        position: relative;
         width: 50px;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 15px;
     }
+    
+    .card > .row > .icon .background {
+        box-shadow: 0px 0px 30px -7px rgb(212, 0, 255);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://media.istockphoto.com/id/1320766134/vector/blue-ultraviolet-neon-round-frame.jpg?s=612x612&w=0&k=20&c=p3-zDDofieyCL2C9DVNcBTIXCxcF3dyxotDLJeejMOo=);
+        filter: saturate(2) contrast(2) ;
+        border-radius: 80%;
+        z-index: 1; 
+        animation: spinBackground 3s linear infinite;
+    }
+    
+    .card > .row > .icon .content {
+        position: relative;
+        z-index: 2; 
+        color: white;
+    }
+    
+    @keyframes spinBackground {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    
+    
 
     .card > .row > .discription{
+        position: absolute;
+        bottom: 22%;
+        left: 127%;
         background-size: cover; /* This makes the image cover the entire card */
         background-repeat: no-repeat; /* This ensures the image doesn't repeat */
-        box-shadow: 0px 10px 30px -5px rgb(255, 0, 119);
-        background-image: url(bgi.jpg);
+        box-shadow: 0px 10px 15px -5px rgba(0, 132, 255, 0.342);
+        
+        background-color: transparent;
+        backdrop-filter: blur(13px);
+        background-image: linear-gradient(
+            80deg, /* Correcting the typo from '120def' to '120deg' */
+            rgba(204, 0, 255, 0.3),
+            rgba(0, 195, 255, 0.3)
+        );
+
+
         border-radius: 20px;
         display: flex;
         justify-content: center;
@@ -180,7 +225,21 @@
         transform: translateY(30px);
         transition-delay: .3s ease;
     }
+        /*----------------------------Hover Discription-------------------------*/
+        .card > .row:hover > .discription {
+            border-radius: 40px;}
+
+        .discription{  
+            transition: all 0.3s;
     
+        }
+        .discription:hover{
+            scale: 1.1;
+            transform: translateY(px) ;
+        }
+    
+        /*______________________________________________________________________*/
+        
     .discription p{
         
         color: #ffffff;
@@ -212,7 +271,7 @@
     }   
 
     .card[for="c2"]{
-        background-image: url();
+        background-image: url(logo\ ig.png);
         background-size: cover; /* This makes the image cover the entire card */
         background-repeat: no-repeat; /* This ensures the image doesn't repeat */
     }
